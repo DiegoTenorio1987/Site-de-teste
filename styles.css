@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Alice", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #F7F4F1;
+    color: #7B6557
+}
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    background: rgba(60, 60, 60, 0.7);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    justify-content: center;
+
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #F7F4F1;
+    font-weight: 500;
+    font-size: 1.77rem;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #F7F4F1, #7B6557);
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.cabecalho {
+    margin-top: 80px;
+}
+
+.foto-perfil {
+    width: 100vw;
+}
+
+.sobre {
+    padding: 6rem 2rem;
+}
+
+.sobre-titulo {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sobre-caixa {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 4px solid #7B6557;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.sobre-paragrafo {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.produtos {
+    padding: 6rem 2rem;
+    background-color: #F7F4F1;
+}
+
+.produtos-titulo {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    color: #7B6557;
+}
+
+.produtos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    height: 580px;
+}
+
+.produtos-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 2px solid #7B6557;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.produtos-card:hover {
+    box-shadow: 0 10px 20px rgba(60, 60, 60, 0.8);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.produtos-imagem {
+    height: 248px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.produtos-paragrafo {
+    font-size: 1.2rem;
+    color: #7B6557;
+    font-weight: 500;
+    line-height: 1.25rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.link-caixa {
+    width: 100%;
+    background: linear-gradient(90deg, #000000, #7B6557);
+    position: absolute;
+    bottom: 0px;
+    padding: 20px;
+}
+
+.link-produtos {
+    text-decoration: none;
+    color: #F7F4F1;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.link-produtos:hover {
+    opacity: 0.4;
+}
+
+.link-produtos:active {
+    opacity: 0.6;
+}
+
+.contato {
+    padding: 6rem 2rem;
+}
+
+.contato-titulo {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+}
+
+.formulario-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid #7B6557;
+    border-radius: 16px;
+}
+
+.campo-form {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #F7F4F1;
+    border: 1px solid #7B6557;
+    outline: none;
+}
+
+.campo-form:focus {
+    border-color: #F7F4F1;
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+
+.botao-form {
+    color: #F7F4F1;
+    background: linear-gradient(90deg, #000000, #7B6557);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 100%;
+    transition: all 0.5 ease;
+}
+
+.botao-form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.08);
+}
+
+@media screen and (max-width: 760px) {
+
+    .navegacao {
+        padding: 1.84rem;
+    }
+
+    .menu {
+        gap: 1.5rem;
+    }
+
+    .menu-link {
+        font-size: 1.2rem;
+    }
+
+    .sobre-paragrafo {
+        font-size: 1.2rem;
+    }
+
+    .produtos-caixa {
+        display: block;
+        height: 2500px;
+    }
+
+    .produtos-card {
+        height: 810px;
+        margin: 40px 0;
+    }
+
+    .produtos-imagem {
+        height: 205px;
+    }
+
+    .produtos-paragrafo {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+
+    .link-produtos {
+        font-size: 1.5rem;
+    }
+
+    .botao-form {
+        font-size: 1.5rem;
+    }
+}

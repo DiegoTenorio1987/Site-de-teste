@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Susi Silva</title>
+</head>
+
+<body>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#produtos" class="menu-link">Produtos</a></li>
+            <li><a href="#contato" class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+
+        <img src="./assets/Foto Perfil.png" alt="Foto da Susi Silva" class="foto-perfil">
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h1 class="sobre-titulo">Sobre Mim</h1>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Fotógrafa e Consultora de Marca Pessoal.<br>
+                Meu propósito é guiar empreendedoras a viverem de forma leve, ensinando-as a
+                fotografar seu trabalho e a
+                posicionar sua marca pessoal para se destacar.</p>
+        </div>
+    </section>
+
+    <section id="produtos" class="produtos">
+        <h2 class="produtos-titulo">Conheça meus produtos</h2>
+        <div class="produtos-caixa">
+
+            <div class="produtos-card">
+                <img src="./assets/WS FotoCell.png" alt="logo-fotocel" class="produtos-imagem">
+                <p class="produtos-paragrafo">Treinamento On-line com suporte direto comigo, onde você vai aprender
+                    técnicas de fotografia com
+                    celular, edição de fotos para redes sociais e criar uma estética visual consistente, que gere desejo
+                    e consequentemente vender mais.
+                    Sem depender de ter uma câmera profissional ou investir em muitos equipamentos e acessórios, ou
+                    seja, usando apenas o seu celular.</p>
+                <div class="link-caixa">
+                    <a class="link-produtos" href="https://pay.kiwify.com.br/zLYByVF" target="_blank">CLIQUE AQUI
+                        E GARANTA SUA VAGA!!</a>
+                </div>
+            </div>
+
+            <div class="produtos-card">
+                <img src="./assets/Posicionamento.png" alt="conhecameusprodutos1" class="produtos-imagem">
+                <p class="produtos-paragrafo">Alinhamento de estratégias.
+                    <br>
+                    Calendário e Linha editorial.
+                    <br>
+                    Captação de fotos e vídeos.
+                    <br>
+                    Criação de conteúdo digital.
+                    <br>
+                    ( Stories, reels e carrossel)
+                    <br>
+                    Bônus: Manual de marca
+                    Templat de planejamento Notion + Canva para alinhamento e estrutura da sua marca pessoal.
+                    Tudo personalizado
+                    <br>
+                    para sua Marca.
+                    <br>
+                </p>
+
+                <div class="link-caixa">
+                    <a class="link-produtos"
+                        href="https://api.whatsapp.com/message/JX46B22TGBNWA1?autoload=1&app_absent=0"
+                        target="_blank">CLIQUE AQUI E SE POSICIONE</a>
+                </div>
+            </div>
+
+            <div class="produtos-card">
+                <img src="./assets/Servico Consultoria.png" alt="conhecameusprodutos1" class="produtos-imagem">
+                <p class="produtos-paragrafo">Transforme suas ideias em realidade, tire seu plano do papel e execute.
+                    Um guia prático para te guiar na sua jornada: Melhore o seu Posicionamento de Marca Pessoal e Imagem
+                    (Desenvolvimento Profissional).
+                    Melhore o seu estilo de vida e aumente sua produtividade (Desenvolvimento pessoal)</p>
+                <div class="link-caixa">
+                    <a class="link-produtos"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdMOFuR8qYoeNfpgWTfCZPoYF9wlCUIlZkHA4gnOIK9Ua7T0w/viewform"
+                        target="_blank">CLIQUE AQUI E SE CADASTRE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2 class="contato-titulo">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input class="campo-form" placeholder="Nome" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar whatsapp</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById("nome").value;
+            const mensagem = document.getElementById("mensagem").value;
+            const telefone = '5535998939795'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            window.open(url, "_blank")
+        }
+    </script>
+</body>
+
+
+</html>
